@@ -5,6 +5,39 @@
 	<meta charset="UTF-8">
 	<title>Media - Game Website Template</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+		.videos {
+			margin: 20px;
+		}
+	
+		.modal-content iframe {
+			margin: 0 auto;
+			display: block;
+		}
+	</style>
+	<script>
+		$(document).ready(function () {
+			
+			$(".modVideo").on("click",function(){
+				var url = $(this).data('src');
+				var desc = $(this).data('desc');
+				$(".modal-title").html(desc);
+				$("#myModal").on('show.bs.modal', function () {
+				$("#video").attr('src', url);
+				});
+			});
+
+			$("#myModal").on('hide.bs.modal', function () {
+				$("#video").attr('src', '');
+				$(".modal-title").html('');
+			});
+
+		});
+	</script>
+
 </head>
 <body>
 	<div id="background">
@@ -15,17 +48,17 @@
 						<a href="index.html" class="logo"><img src="images/logo.png" alt="" width="150px" style="margin-top:-45px;"></a>
 					</center>
 					<ul>
-						<li>
-							<a href="index.html" id="menu1">Inicio</a>
-						</li>
 						<li class="selected">
+							<a href="index.html" id="menu1">Início</a>
+						</li>
+						<li>
 							<a href="media.html" id="menu2">Galeria</a>
 						</li>
 						<li>
-							<a href="games.html" id="menu3">Jogos</a>
+							<a href="#" id="menu3">Jogos</a>
 						</li>
 						<li>
-							<a href="about.html" id="menu4">Sobre</a>
+							<a href="#" id="menu4">Sobre</a>
 						</li>
 						<li>
 							<a href="#" id="menu5"></a>
@@ -44,57 +77,66 @@
 								<ul>
 									<li>
 										<a href="#" class="figure"><img src="images/wallpaper1.jpg" alt=""></a>
-										<span><a href="#">This is just a place holder</a></span>
+										<span><a href="#">Jogo Ota</a></span>
 									</li>
 									<li>
 										<a href="#" class="figure"><img src="images/wallpaper2.jpg" alt=""></a>
-										<span><a href="#">This is just a place holder</a></span>
+										<span><a href="#">Jogo Ota1</a></span>
 									</li>
-									<li>
+									<!-- <li>
 										<a href="#" class="figure"><img src="images/wallpaper3.jpg" alt=""></a>
 										<span><a href="#">This is just a place holder</a></span>
 									</li>
 									<li>
 										<a href="#" class="figure"><img src="images/wallpaper4.jpg" alt=""></a>
 										<span><a href="#">This is just a place holder</a></span>
-									</li>
+									</li> -->
 								</ul>
 							</div>
 							<div>
 								<h3>videos</h3>
 								<ul>
 									<li>
-										<a href="#" class="figure"><img src="images/video1.jpg" alt=""></a>
-										<span><a href="#">This is just a place holder</a></span>
+										<a href="#myModal" class="figure modVideo" data-toggle="modal" data-desc="Aniversário do grupo" data-src="https://www.youtube.com/embed/VF1Yz05iQM0">
+											<img src="images/video1.jpg" alt="">
+										</a>
+										<span><a href="#">Aniversário do grupo</a></span>
 									</li>
 									<li>
-										<a href="#" class="figure"><img src="images/video2.jpg" alt=""></a>
-										<span><a href="#">This is just a place holder</a></span>
+										<a href="#myModal" class="figure modVideo" data-toggle="modal" data-desc="Jogo Ota" data-src="https://www.youtube.com/embed/Le8BtpIuwdA">
+											<img src="images/video2.jpg" alt="">
+										</a>
+										<span><a href="#">Jogo Ota</a></span>
 									</li>
 									<li>
-										<a href="#" class="figure"><img src="images/video3.jpg" alt=""></a>
-										<span><a href="#">This is just a place holder</a></span>
+										<a href="#myModal" class="figure modVideo" data-toggle="modal" data-desc="Felipim aos trancos e barracos" data-src="https://www.youtube.com/embed/KXURgJkPpzg">
+											<img src="images/video3.jpg" alt="">
+										</a>
+										<span><a href="#">Felipim aos trancos e barracos</a></span>
 									</li>
 									<li>
-										<a href="#" class="figure"><img src="images/video4.jpg" alt=""></a>
-										<span><a href="#">This is just a place holder</a></span>
+										<a href="#myModal" class="figure modVideo" data-toggle="modal" data-desc="Dicas e tátivas" data-src="https://www.youtube.com/embed/9u5dfdMUWGs">
+											<img src="images/video4.jpg" alt="">
+										</a>
+										<span><a href="#">Dicas e tátivas</a></span>
 									</li>
 								</ul>
 							</div>
 						</div>
 						<div class="article">
-							<h3>this is just a place holder</h3>
+							<h3>Este é um bom espaço para caricaturas</h3>
 							<ul>
 								<li>
 									<a href="#" class="figure"><img src="images/media2.jpg" alt=""></a>
 									<p>
-										This website template has been designed by <a href="http://www.freewebsitetemplates.com/">Free Website Templates</a> for you, for free. You can replace all this text with your own text. You can remove any link to our website from this website template, you're free to use this website template.
+										Colocar um texto de cada um!
+										<br>Seria legal.
 									</p>
 								</li>
 								<li>
 									<a href="#" class="figure"><img src="images/media3.jpg" alt=""></a>
 									<p>
-										If you're having problems editing this website template, then don't hesitate to ask for help on the <a href="http://www.freewebsitetemplates.com/forums/">Forum</a>.
+										Ou talvez espaço média de cada um se caso o quiser
 									</p>
 								</li>
 							</ul>
@@ -107,13 +149,13 @@
 			<div>
 				<ul>
 					<li id="facebook">
-						<a href="http://freewebsitetemplates.com/go/facebook/">facebook</a>
+						<a href="https://www.facebook.com/gateairsoftclube">Facebook</a>
 					</li>
 					<li id="twitter">
-						<a href="http://freewebsitetemplates.com/go/twitter/">twitter</a>
+						<a href="http://www.youtube.com/airsoftgf">Youtube</a>
 					</li>
 					<li id="googleplus">
-						<a href="http://freewebsitetemplates.com/go/googleplus/">googleplus</a>
+						<a href="mailto:airsoft.gf@gmail.com">Email</a>
 					</li>
 				</ul>
 				<p>
@@ -122,5 +164,33 @@
 			</div>
 		</div>
 	</div>
+
+
+	<div class="videos">
+		<!-- Button HTML (to Trigger Modal) 
+		<a href="#myModal" class="btn btn-lg btn-primary" data-toggle="modal">Launch Demo Modal</a>
+	https://www.youtube.com/watch?v=Le8BtpIuwdA
+	-->
+	
+		<!-- Modal HTML -->
+		<div id="myModal" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">YouTube Video</h4>
+					</div>
+					<div class="modal-body">
+						<!-- <iframe id="video" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe> -->
+						<iframe id="video" width="560" height="315"  frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
 </body>
 </html>
