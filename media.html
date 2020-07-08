@@ -1,51 +1,29 @@
 <!DOCTYPE HTML>
-<!-- Website Template by freewebsitetemplates.com -->
-<html>
+<html lang="pt">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>EQUIPE GATE</title>
+	<link rel="stylesheet" type="text/css" href="css/modal-video.min.css">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<style>
-		.videos {
-			margin: 20px;
-		}
 	
-		.modal-content iframe {
-			margin: 0 auto;
-			display: block;
-		}
-	</style>
-	<script>
-		$(document).ready(function () {
-			
-			$(".modVideo").on("click",function(){
-				var url = $(this).data('src');
-				var desc = $(this).data('desc');
-				$(".modal-title").html(desc);
-				$("#myModal").on('show.bs.modal', function () {
-				$("#video").attr('src', url);
-				});
-			});
-
-			$("#myModal").on('hide.bs.modal', function () {
-				$("#video").attr('src', '');
-				$(".modal-title").html('');
-			});
-
-		});
-	</script>
 
 </head>
 <body>
+
+<!-- <button class="js-video-button" data-video-id='L61p2uyiMSo'>Youtube</button>
+<button class="js-video-button" data-channel="facebook" data-video-id="10153231379946729">Facebook</button>
+<a href="#" class="js-video-button" data-channel="video"
+	data-video-url="http://developer.a-blogcms.jp/themes/developer/movies/2.8.0.mp4">video</a> -->
+
+
 	<div id="background">
 		<div id="header">
 			<div>
 				<div>
 					<center>
-						<a href="index.html" class="logo"><img src="images/logo.png" alt="" width="150px" style="margin-top:-45px;"></a>
+						<a href="index.html" class="logo"><img src="images/logo.png" alt="" width="150px"
+								style="margin-top:-45px;"></a>
 					</center>
 					<ul>
 						<li>
@@ -55,13 +33,13 @@
 							<a href="media.html" id="menu2">Galeria</a>
 						</li>
 						<li>
-							<a href="#" id="menu3">Jogos</a>
+							<a href="games.html" id="menu3">Equipa</a>
 						</li>
 						<li>
-							<a href="#" id="menu4">Sobre</a>
+							<a href="patrocinadores.html" id="menu4">Patrocinadores</a>
 						</li>
 						<li>
-							<a href="#" id="menu5"></a>
+							<a href="#" id="menu5">Sobre</a>
 						</li>
 					</ul>
 				</div>
@@ -97,25 +75,26 @@
 								<h3>videos</h3>
 								<ul>
 									<li>
-										<a href="#myModal" class="figure modVideo" data-toggle="modal" data-desc="Aniversário do grupo" data-src="https://www.youtube.com/embed/VF1Yz05iQM0">
+
+										<a class="js-video-button" data-video-id='VF1Yz05iQM0'>
 											<img src="images/video1.jpg" alt="">
 										</a>
 										<span><a href="#">Aniversário do grupo</a></span>
 									</li>
 									<li>
-										<a href="#myModal" class="figure modVideo" data-toggle="modal" data-desc="Jogo Ota" data-src="https://www.youtube.com/embed/Le8BtpIuwdA">
+										<a class="js-video-button" data-video-id='Le8BtpIuwdA'>
 											<img src="images/video2.jpg" alt="">
 										</a>
 										<span><a href="#">Jogo Ota</a></span>
 									</li>
 									<li>
-										<a href="#myModal" class="figure modVideo" data-toggle="modal" data-desc="Felipim aos trancos e barracos" data-src="https://www.youtube.com/embed/KXURgJkPpzg">
+										<a class="js-video-button" data-video-id='KXURgJkPpzg'>
 											<img src="images/video3.jpg" alt="">
 										</a>
 										<span><a href="#">Felipim aos trancos e barracos</a></span>
 									</li>
 									<li>
-										<a href="#myModal" class="figure modVideo" data-toggle="modal" data-desc="Dicas e tátivas" data-src="https://www.youtube.com/embed/9u5dfdMUWGs">
+										<a class="js-video-button" data-video-id='9u5dfdMUWGs'>
 											<img src="images/video4.jpg" alt="">
 										</a>
 										<span><a href="#">Dicas e tátivas</a></span>
@@ -191,6 +170,18 @@
 	</div>
 
 
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+	integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="js/jquery-modal-video.min.js"></script>
+<script>
+	$(".js-video-button").modalVideo({
+		youtube: {
+			controls: 0,
+			nocookie: true
+		}
+	});
+</script>
 
 </body>
 </html>
