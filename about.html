@@ -1,10 +1,53 @@
 <!DOCTYPE HTML>
-<!-- Website Template by freewebsitetemplates.com -->
-<html>
+<html lang="pt">
+
 <head>
 	<meta charset="UTF-8">
-	<title>About - Game Website Template</title>
-	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>EQUIPE GATE</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css"><style>
+		* {
+			box-sizing: border-box;
+		}
+	
+		body {
+			margin: 0;
+			font-family: Arial;
+			font-size: 17px;
+		}
+	
+		#myVideo {
+			position: relative;
+			right: 0;
+			bottom: 0;
+			min-width: 100%;
+			min-height: 100%;
+		}
+	
+		.content {
+			position: fixed;
+			bottom: 0;
+			background: rgba(0, 0, 0, 0.5);
+			color: #f1f1f1;
+			width: 100%;
+			padding: 20px;
+		}
+	
+		#myBtn {
+			width: 200px;
+			font-size: 18px;
+			padding: 10px;
+			border: none;
+			background: #000;
+			color: #fff;
+			cursor: pointer;
+		}
+	
+		#myBtn:hover {
+			background: #ddd;
+			color: black;
+		}
+	</style>
 </head>
 <body>
 	<div id="background">
@@ -37,8 +80,38 @@
 		<div id="body">
 			<div>
 				<div>
-					<div class="about" style="display: none;">
+					<div class="about">
+						<video autoplay muted loop id="myVideo">
+							<source src="images/videos/historia.mp4" type="video/mp4">
+							Your browser does not support HTML5 video.
+						</video>
 						<div class="content">
+							<h1>Sobre nós</h1>
+							<p>
+								1º Quem somos
+								<!-- <p>&nbsp;</p> -->
+								<p>&nbsp;
+								<p>
+									A Equipe GATE foi fundada no dia 22 de julho de 2016, por um grupo de antigos amigos, na qual elegemos o nosso Team
+									Leader - Gabriel Rocha e decidimos algumas coisa sobre a Equipe. Exemplo = nome e regras.
+								<p>&nbsp;
+								<p>
+									<!-- <p>&nbsp;</p> -->
+									A Equipe GATE tem sede em Lisboa mas o seu campo é em Porto Alto.
+									Hoje contamos com 21 elementos no total, sendo dividido em Team Leader, capitão, sargento, soldados e recrutas e
+									Fotográfo Oficial.
+								<p>
+									Detalhamos melhor essa historia em vídeo, se quiser saber mais sobre:
+								<p>&nbsp;
+								<p>
+									<!-- <p>&nbsp;</p> -->
+									<a href="https://www.facebook.com/561602530689527/videos/950116065171503" target="_blank" class="more">VÍDEO</a>
+							</p>
+							<button id="myBtn" onclick="myFunction()">Pause</button>
+						</div>
+
+
+						<div class="content" style="display: none;">
 							<ul>
 								<li>
 									<h3>We Have Free Templates for Everyone</h3>
@@ -65,7 +138,7 @@
 								</li>
 							</ul>
 						</div>
-						<div class="aside">
+						<div class="aside" style="display: none;">
 							<ul>
 								<li>
 									<h3>Be Part of Our Community</h3>
@@ -108,5 +181,19 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		var video = document.getElementById("myVideo");
+		var btn = document.getElementById("myBtn");
+
+		function myFunction() {
+			if (video.paused) {
+				video.play();
+				btn.innerHTML = "Pause";
+			} else {
+				video.pause();
+				btn.innerHTML = "Play";
+			}
+		}
+	</script>
 </body>
 </html>
