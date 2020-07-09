@@ -6,6 +6,12 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>EQUIPE GATE</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<script>
+		var host = "equipegate.com";
+		if ((window.location.host == host || window.location.host == "www"+host) && window.location.protocol != "https:") {
+			window.location.protocol = "https:"+host;
+		}
+	</script>
 </head>
 <body>
 	<div id="background">
